@@ -53,9 +53,16 @@ A more in depth review of Chevrotain can be found in this great article on: [Par
 
 ## Compatibility
 
-Chevrotain will run on any **modern** JavaScript ES2015 runtime.
-That includes nodejs maintenance/active/current version, modern major browsers,
-but **not** legacy ES5.1 runtimes such as IE11.
+Chevrotain supports modern JavaScript runtimes: the Node.js versions declared
+in the published package's `package.json` `engines` field, and current evergreen
+browsers.
+
+Chevrotain may rely on modern standard library APIs. Check the relevant
+`tsconfig*.json` files and package `engines` fields for exact runtime
+requirements.
+
+Legacy runtimes are not supported. If you need to support older browsers,
+transpilation and polyfills may be required.
 
 ## Contributions
 
